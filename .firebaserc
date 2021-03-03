@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "spyfall-374a7": {
+      "hosting": {
+        "clubhouse": [
+          "spyfall-374a7"
+        ]
+      }
+    }
+  }
+}

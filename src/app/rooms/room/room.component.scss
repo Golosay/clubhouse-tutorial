@@ -1,0 +1,33 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.room-content {
+    flex: 1;
+    overflow: auto;
+    padding: 30px;
+}
+.room-footer {
+    height: 80px;
+    text-align: center;
+}
+.leave-btn {
+    background: #e8e3df;
+    color: #ba9496;
+}
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.user-card {
+    text-align: center;
+    margin: 15px;
+    img {
+        border-radius: 50%;
+        &.host {
+            border: 4px green solid;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<section class="rooms">
+    <div class="card"
+         *ngFor="let room of $rooms | async"
+         (click)="navigate(room?.key)">
+        <h4>{{room.name}}</h4>
+    </div>
+</section>
+
+<section class="create-room"
+         [ngClass]="{'shown': isRoomCreationShown}">
+    <button class="btn"
+            (click)="isRoomCreationShown = !isRoomCreationShown">+ Start a new room</button>
+    <div class="room-details">
+        <label>
+            <p>Room name</p>
+            <input type="text"
+                   #roomName>
+        </label>
+        <button class="btn"
+                (click)="addRoom(roomName)">Let's go</button>
+    </div>
+</section>

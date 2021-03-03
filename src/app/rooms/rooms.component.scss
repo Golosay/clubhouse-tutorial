@@ -1,0 +1,76 @@
+:host {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.rooms {
+  flex: 1;
+  padding: 15px;
+  max-height: calc( 100vh - 45px );
+  overflow: auto;
+}
+.card {
+  padding: 15px;
+  background: #fff;
+  margin-bottom: 15px;
+}
+
+.create-room {
+  overflow: hidden;
+  padding: 30px 15px 15px;
+  background: rgb(241, 239, 229);
+  background: linear-gradient(
+    90deg,
+    rgba(241, 239, 229, 1) 0%,
+    rgba(241, 239, 229, 1) 15%,
+    rgba(241, 239, 229, 1) 100%
+  );
+
+  .btn {
+    background: #26ad60;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: none;
+    border: 0;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.1s ease-in;
+    opacity: 1;
+  }
+
+  .room-details {
+    bottom: -200px;
+  }
+
+  &.shown {
+    & > .btn {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .room-details {
+      bottom: 15px;
+    }
+  }
+}
+
+.room-details {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  transition: all 0.1s ease-in;
+  position: fixed;
+  width: calc(100% - 30px);
+  left: 15px;
+  input {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 15px;
+  }
+}
